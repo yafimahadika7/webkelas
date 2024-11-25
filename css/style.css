@@ -745,6 +745,63 @@ body.mobile-nav-active #mobile-nav-toggle {
   outline: none; /* Menghilangkan outline saat fokus */
 }
 
+/* Media Query untuk perangkat Android kecil */
+@media only screen and (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr; /* Satu kolom per baris */
+    gap: 15px; /* Jarak antar card lebih kecil */
+    padding: 10px; /* Mengurangi padding keseluruhan */
+  }
+
+  .card-content {
+    flex-direction: column; /* Susun vertikal */
+    align-items: center; /* Pusatkan konten */
+    gap: 10px; /* Jarak antar elemen lebih kecil */
+  }
+
+  .card-img {
+    width: 150px; /* Sesuaikan ukuran gambar */
+    height: 200px;
+  }
+
+  .text-content {
+    text-align: center; /* Pusatkan teks */
+  }
+
+  .text-content h3 {
+    font-size: 1em; /* Ukuran teks lebih kecil */
+  }
+
+  .text-content p {
+    font-size: 0.8em; /* Ukuran teks lebih kecil */
+  }
+
+  .btn-get {
+    width: auto; /* Atur tombol agar menyesuaikan konten */
+    font-size: 0.9em;
+    padding: 10px 20px;
+    margin: 15px 0 0; /* Atur ulang margin */
+  }
+}
+
+/* Media Query untuk perangkat Android sangat kecil (320px) */
+@media only screen and (max-width: 360px) {
+  .card-img {
+    width: 120px; /* Ukuran gambar lebih kecil */
+    height: 160px;
+  }
+
+  .text-content h3 {
+    font-size: 0.9em; /* Ukuran teks lebih kecil */
+  }
+
+  .btn-get {
+    font-size: 0.8em; /* Tombol lebih kecil */
+    padding: 8px 16px;
+  }
+}
+
+
 /* Tab Styling */
 
 #portfolio {
@@ -836,5 +893,83 @@ body.mobile-nav-active #mobile-nav-toggle {
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+/* Media Query untuk layar Android kecil hingga sedang (max-width 768px) */
+@media only screen and (max-width: 768px) {
+  /* Bagian #portfolio */
+  #portfolio {
+    height: auto; /* Sesuaikan tinggi dengan konten */
+    background-size: contain; /* Sesuaikan gambar untuk layar kecil */
+  }
+
+  #portfolio:before {
+    background: rgba(0, 0, 0, 0.7); /* Tingkatkan opacity untuk keterbacaan */
+  }
+
+  /* Modal */
+  .modal-content {
+    width: 90%; /* Kurangi lebar pada layar kecil */
+    max-width: 500px; /* Batasi ukuran maksimal */
+  }
+
+  #caption {
+    font-size: 14px; /* Ukuran teks lebih kecil */
+    color: #eee; /* Tingkatkan kontras */
+  }
+
+  .close {
+    font-size: 30px; /* Kurangi ukuran ikon tutup */
+    top: 10px;
+    right: 20px;
+  }
+
+  /* Image Alt Text */
+  .image-alt-text {
+    font-size: 14px; /* Ukuran teks lebih kecil */
+    color: #fff;
+    text-align: center;
+  }
+
+  /* Animasi Hero Container */
+  .hero-container.animate {
+    animation: fadeInMobile 1.2s ease-in-out forwards;
+  }
+
+  @keyframes fadeInMobile {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+/* Media Query untuk layar Android sangat kecil (max-width 480px) */
+@media only screen and (max-width: 480px) {
+  /* Bagian #portfolio */
+  #portfolio {
+    padding: 40px; /* Tambahkan padding internal */
+  }
+
+  /* Modal */
+  .modal-content {
+    width: 95%; /* Lebih ramping untuk layar sangat kecil */
+    max-width: 400px; /* Batasi ukuran maksimal */
+  }
+
+  #caption {
+    font-size: 12px; /* Ukuran teks lebih kecil lagi */
+  }
+
+  /* Tombol Close */
+  .close {
+    font-size: 25px;
+    top: 8px;
+    right: 15px;
   }
 }
