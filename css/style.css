@@ -953,7 +953,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media only screen and (max-width: 480px) {
   /* Bagian #portfolio */
   #portfolio {
-    padding: 40px; /* Tambahkan padding internal */
+    padding: 65px; /* Tambahkan padding internal */
   }
 
   /* Modal */
